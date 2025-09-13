@@ -33,6 +33,7 @@ body{
   scroll-behavior:smooth;
 }
 a{color:var(--pri)}
+a:focus-visible{outline:3px solid rgba(15,210,255,.45); outline-offset:2px; border-radius:6px}
 img{max-width:100%; display:block}
 .wrap{max-width:var(--w); margin:0 auto; padding:0 20px}
 
@@ -66,7 +67,6 @@ nav a:hover, nav a.active{background:rgba(15,210,255,.12); color:#fff; opacity:1
 
 /* ---------- Hero ---------- */
 .hero{position:relative; overflow:hidden; padding:60px 0 40px; isolation:isolate;}
-/* Orby w tle (WOW) */
 .hero::before, .hero::after{
   content:""; position:absolute; z-index:-1; width:480px; height:480px;
   border-radius:50%; filter:blur(60px); opacity:.5; pointer-events:none;
@@ -112,8 +112,7 @@ nav a:hover, nav a.active{background:rgba(15,210,255,.12); color:#fff; opacity:1
 
 /* Decorative wave */
 .wave{position:absolute; left:0; right:0; bottom:-1px; height:80px; background:
- radial-gradient(50% 80px at 50% 120%, rgba(255,255,255,.1), transparent 70%);
- pointer-events:none}
+ radial-gradient(50% 80px at 50% 120%, rgba(255,255,255,.1), transparent 70%); pointer-events:none}
 
 /* ---------- Sections ---------- */
 section{padding:64px 0}
@@ -124,8 +123,8 @@ h2{font-family:"Playfair Display",serif; font-size:34px; margin:0}
 .grid{display:grid; gap:20px}
 .grid-3{grid-template-columns:repeat(3,1fr)}
 .grid-2{grid-template-columns:repeat(2,1fr)}
-.card{background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:18px; overflow:hidden; transition:transform .2s ease;}
-.card:hover{ transform:translateY(-2px); }
+.card{background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:18px; overflow:hidden; transition:transform .2s ease}
+.card:hover{ transform:translateY(-2px) }
 .service img,.portfolio img{width:100%; height:210px; object-fit:cover; border-radius:12px; border:1px solid rgba(255,255,255,.06)}
 .service h3{margin:.6em 0 .3em}
 .note{border-style:dashed}
@@ -135,16 +134,14 @@ h2{font-family:"Playfair Display",serif; font-size:34px; margin:0}
   background:linear-gradient(135deg,rgba(15,210,255,.2),rgba(15,210,255,.05)); border:1px solid rgba(15,210,255,.25)
 }
 
-/* Spotlight na kartach (WOW) */
-.card{ position:relative; }
+/* Spotlight na kartach (nie blokuje kliknięć) */
+.card{ position:relative }
 .card::before{
   content:""; position:absolute; inset:-1px; border-radius:16px;
   background:radial-gradient(160px 80px at var(--mx,50%) var(--my,-20%), rgba(15,210,255,.18), transparent 70%);
-  opacity:0; transition:opacity .25s ease;
-  /* FIX: nie przechwytuj kliknięć na formularzach */
-  pointer-events:none;
+  opacity:0; transition:opacity .25s ease; pointer-events:none;
 }
-.card:hover::before{ opacity:1; }
+.card:hover::before{ opacity:1 }
 
 /* ---------- Portfolio ---------- */
 .filters{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:12px}
@@ -166,57 +163,35 @@ h2{font-family:"Playfair Display",serif; font-size:34px; margin:0}
 
 /* Pola formularza */
 label{display:block; font-size:14px; color:var(--mut); margin:6px 0}
-label > input, label > select, label > textarea{ margin-top:6px; }
+label > input, label > select, label > textarea{ margin-top:6px }
 input,select,textarea{
   width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12);
   background:#092131; color:#eaf6fb; outline:none
 }
 textarea{min-height:110px; resize:vertical}
 
-/* Focus-ringi (WOW + a11y) */
+/* Focus-ringi */
 input:focus, select:focus, textarea:focus{
   border-color:rgba(15,210,255,.55);
   box-shadow:0 0 0 3px rgba(15,210,255,.18), inset 0 0 0 9999px rgba(255,255,255,.01);
   transition:box-shadow .2s ease, border-color .2s ease;
 }
-button.cta:active{ transform:scale(.98); }
+button.cta:active{ transform:scale(.98) }
 
-/* Wyrównanie drugiego rzędu (stopień zabrudzenia + checkboxy) */
-.quote .grid-2{ align-items:end; }
+/* Wyrównanie drugiego rzędu */
+.quote .grid-2{ align-items:end }
 
-/* Checkboxy/przełączniki */
-.checks{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  align-self:end;
-  padding-top:0;
-}
-.checks label{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  line-height:1.2;
-}
+/* Checkboxy */
+.checks{ display:flex; flex-direction:column; gap:10px; align-self:end; padding-top:0 }
+.checks label{ display:inline-flex; align-items:center; gap:10px; line-height:1.2 }
 .checks input[type="checkbox"],
-.consent input[type="checkbox"]{
-  width:18px;
-  height:18px;
-  accent-color:var(--pri2);
-}
+.consent input[type="checkbox"]{ width:18px; height:18px; accent-color:var(--pri2) }
 
 /* Zgoda RODO */
-.consent{
-  display:flex;
-  align-items:flex-start;
-  gap:10px;
-  margin-top:6px;
-  line-height:1.45;
-  word-break:break-word;
-}
-.consent input{ margin-top:3px; }
+.consent{ display:flex; align-items:flex-start; gap:10px; margin-top:6px; line-height:1.45; word-break:break-word }
+.consent input{ margin-top:3px }
 
-/* Kostka z estymacją */
+/* Estymacja */
 .est-box{border:1px solid rgba(15,210,255,.22)}
 .est{font-size:28px; font-weight:800; min-height:40px}
 
@@ -229,23 +204,37 @@ summary{cursor:pointer; font-weight:600}
 
 /* ---------- Contact ---------- */
 .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px}
-#contactForm .cta{ width:100%; }
+#contactForm .cta{ width:100% }
 .map-placeholder{display:grid; place-items:center; background:#0b2230; border:1px dashed rgba(255,255,255,.25); height:320px; border-radius:12px}
 .social a{display:inline-flex; width:38px;height:38px; align-items:center; justify-content:center; border-radius:10px; border:1px solid rgba(255,255,255,.12); margin-right:8px; color:#fff; text-decoration:none}
 
 /* ---------- Footer ---------- */
 footer{padding:32px 0 80px; background:#06141d; border-top:1px solid rgba(255,255,255,.06); margin-top:40px}
-.foot{display:grid; grid-template-columns:2fr 1fr 1fr 1.2fr; gap:20px}
+.foot{
+  /* było: 2fr 1fr 1fr 1.2fr -> teraz 5 kolumn z „Prawne” */
+  display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr; gap:20px; align-items:start;
+}
+.foot h4{ margin:0 0 10px; font-size:16px }
+.foot-list{ list-style:none; padding:0; margin:0; display:grid; gap:8px }
+.foot a{ color:var(--sec); text-decoration:none; opacity:.95 }
+.foot a:hover, .foot a:focus-visible{ text-decoration:underline; opacity:1 }
 .sub{display:flex; gap:10px}
 .sub input{flex:1}
 .copyright{color:var(--mut); margin-top:14px; font-size:13px}
+
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.06);
+  margin-top:14px; padding-top:12px;
+  color:var(--mut); font-size:13px;
+  display:flex; justify-content:space-between; align-items:center; gap:10px;
+}
 
 /* ---------- Float ---------- */
 .float-chat{position:fixed; right:18px; bottom:18px; z-index:9999; display:flex; gap:10px; flex-direction:column}
 .float-chat a{display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:#01202a; background:linear-gradient(135deg,#25D366,#1abc54); padding:12px 14px; border-radius:999px; box-shadow:var(--shadow); font-weight:700}
 .float-chat .call{background:linear-gradient(135deg,var(--pri),var(--pri2))}
 
-/* ---------- Sticky CTA (mobile, WOW) ---------- */
+/* ---------- Sticky CTA (mobile) ---------- */
 .sticky-cta{
   display:none; position:fixed; left:14px; right:14px; bottom:14px; z-index:9998;
   text-align:center; padding:14px; border-radius:999px;
@@ -258,14 +247,14 @@ footer{padding:32px 0 80px; background:#06141d; border-top:1px solid rgba(255,25
 .cookie .row{display:flex; gap:14px; align-items:center; flex-wrap:wrap; justify-content:space-between}
 .cookie .btns{display:flex; gap:10px}
 
-/* Pasek postępu (opcjonalnie – gdy nie używasz inline-styli) */
+/* Pasek postępu (opcjonalnie) */
 .progress{
   position:fixed; left:0; top:0; height:3px; width:0;
   background:linear-gradient(90deg,var(--pri),var(--pri2));
   box-shadow:0 0 12px rgba(15,210,255,.6); z-index:2000; transform-origin:0 50%;
 }
 
-/* ---------- Animations (inspired by prismic/uiverse) ---------- */
+/* ---------- Animations ---------- */
 .grad-anim{
   background:linear-gradient(90deg, #fff, var(--sec), var(--pri), #fff);
   background-size:300% 100%;
@@ -274,11 +263,9 @@ footer{padding:32px 0 80px; background:#06141d; border-top:1px solid rgba(255,25
 }
 @keyframes shine { 0%{background-position:0% 50%} 100%{background-position:100% 50%} }
 
-/* reveal on scroll */
 .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .8s cubic-bezier(.2,.8,.2,1)}
 .reveal.in-view{opacity:1; transform:translateY(0)}
 
-/* tilt hover */
 .tilt{transform-style:preserve-3d; transform:perspective(800px) rotateX(0) rotateY(0); transition:transform .2s ease}
 .tilt:hover{transform:perspective(800px) rotateX(2deg) rotateY(-3deg) translateY(-3px)}
 
@@ -290,21 +277,63 @@ footer{padding:32px 0 80px; background:#06141d; border-top:1px solid rgba(255,25
 }
 .cta:hover::after{transform:translateX(120%)}
 
+/* ---------- Typing caret ---------- */
+.typing{ border-right:2px solid var(--sec); padding-right:2px; white-space:nowrap; animation:caretBlink .85s steps(1) infinite }
+@keyframes caretBlink { 50% { border-color:transparent } }
+
+/* ---------- Certyfikaty ---------- */
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.cert .i{
+  width:48px;height:48px; display:grid; place-items:center; border-radius:12px;
+  background:linear-gradient(135deg,rgba(15,210,255,.24),rgba(15,210,255,.06));
+  border:1px solid rgba(15,210,255,.35); font-size:22px; transition:transform .25s ease;
+}
+.cert:hover .i{ transform:rotate(-6deg) scale(1.05) }
+
+/* ---------- Podstrony / legal pages ---------- */
+.page{ padding:24px 0 64px }
+.prose{ max-width:860px; margin:0 auto; padding:0 20px }
+.prose h1{ font-family:"Playfair Display",serif; font-size:36px; margin:0 0 .4em }
+.prose h2{ font-family:"Playfair Display",serif; font-size:26px; margin:1.2em 0 .4em }
+.prose h3{ font-size:18px; margin:1em 0 .35em }
+.prose p{ margin:.6em 0; color:var(--txt) }
+.prose .mut{ color:var(--mut) }
+.prose ul, .prose ol{ padding-left:1.2em; margin:.4em 0 .8em; color:var(--mut) }
+.prose li + li{ margin-top:.35em }
+.prose a{ color:var(--sec) }
+.prose blockquote{
+  margin:1em 0; padding:12px 14px; border-left:3px solid var(--pri);
+  background:rgba(15,210,255,.06); border-radius:8px
+}
+.prose table{ width:100%; border-collapse:collapse; margin:1em 0; font-size:14px }
+.prose th, .prose td{ border:1px solid rgba(255,255,255,.12); padding:8px 10px }
+.prose th{ background:rgba(255,255,255,.06); text-align:left }
+.prose .toc{ background:#092131; border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:10px; margin:12px 0 }
+.sitemap-list{ list-style:none; padding:0; margin:0; display:grid; gap:8px }
+.sitemap-list a{ color:var(--sec); text-decoration:none }
+.sitemap-list a:hover{ text-decoration:underline }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px){
   .hero-grid,.grid-3,.grid-2,.about-grid,.quote,.contact-grid,.foot{grid-template-columns:1fr}
   nav ul{display:none}
   .mobile-toggle{display:inline-flex}
   .stats{grid-template-columns:repeat(3,1fr)}
+
+  /* menu mobilne rozwijane */
+  header .nav{ position:relative }
+  nav ul{
+    position:absolute; right:20px; top:64px; width:min(92vw,360px);
+    flex-direction:column; gap:8px; padding:10px;
+    background:var(--card); border:1px solid rgba(255,255,255,.12); border-radius:12px; box-shadow:var(--shadow)
+  }
+  nav ul a{ display:block }
 }
 
 @media (max-width: 780px){
-  /* Formularz wyceny – naturalny układ „stosu” */
-  .quote .grid-2{ align-items:stretch; }
-  .checks{ align-self:auto; }
-  #quoteForm.card, #contactForm.card { padding-bottom:22px; }
-
-  /* Sticky CTA + przesunięcie pływających przycisków */
+  .quote .grid-2{ align-items:stretch }
+  .checks{ align-self:auto }
+  #quoteForm.card, #contactForm.card { padding-bottom:22px }
   .sticky-cta{display:block}
   .float-chat{bottom:70px}
 }
@@ -312,13 +341,15 @@ footer{padding:32px 0 80px; background:#06141d; border-top:1px solid rgba(255,25
 @media (max-width: 640px){
   .stats{grid-template-columns:repeat(2,1fr)}
   .headline{font-size:34px}
+  .foot{ grid-template-columns: 1fr }
+  .foot-bottom{ flex-direction:column; align-items:flex-start }
 }
 
 /* Ikony social w stopce */
-.social-foot { margin-top: 8px; }
-.social a.ico { display:inline-flex; align-items:center; justify-content:center; }
-.social a.ico svg { width:18px; height:18px; }
-.social a.ico:hover { transform: translateY(-2px); }
+.social-foot { margin-top: 8px }
+.social a.ico { display:inline-flex; align-items:center; justify-content:center }
+.social a.ico svg { width:18px; height:18px }
+.social a.ico:hover { transform: translateY(-2px) }
 
 /* --- Timeline --- */
 .timeline{counter-reset:step; display:grid; gap:14px; position:relative}
@@ -352,9 +383,7 @@ footer{padding:32px 0 80px; background:#06141d; border-top:1px solid rgba(255,25
   height:300px; overflow:auto; background:#0b2230; border:1px solid rgba(255,255,255,.08);
   border-radius:12px; padding:12px; display:flex; flex-direction:column; gap:8px;
 }
-.bubble{
-  max-width:85%; padding:10px 12px; border-radius:12px; line-height:1.5; position:relative
-}
+.bubble{ max-width:85%; padding:10px 12px; border-radius:12px; line-height:1.5; position:relative }
 .bubble.bot{background:#0f3347; border:1px solid rgba(255,255,255,.08)}
 .bubble.me{background:#0fd2ff; color:#01202a; align-self:flex-end}
 .chat-input{display:flex; gap:10px; margin-top:10px}
@@ -363,29 +392,7 @@ footer{padding:32px 0 80px; background:#06141d; border-top:1px solid rgba(255,25
   padding:12px 14px; border-radius:10px;
 }
 
-/* --- Certyfikaty --- */
-.grid-4{grid-template-columns:repeat(4,1fr)}
-.cert .i{
-  width:48px;height:48px; display:grid; place-items:center; border-radius:12px;
-  background:linear-gradient(135deg,rgba(15,210,255,.24),rgba(15,210,255,.06));
-  border:1px solid rgba(15,210,255,.35); font-size:22px; transition:transform .25s ease;
+/* Motion reduction */
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important; transition:none !important}
 }
-.cert:hover .i{ transform:rotate(-6deg) scale(1.05) }
-
-/* Responsive poprawki dla nowych sekcji */
-@media (max-width:1024px){
-  .grid-4{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:640px){
-  .grid-4{grid-template-columns:1fr}
-  .chat-window{height:280px}
-}
-
-/* Typing caret */
-.typing{
-  border-right:2px solid var(--sec);
-  padding-right:2px;
-  white-space:nowrap;
-  animation:caretBlink .85s steps(1) infinite;
-}
-@keyframes caretBlink { 50% { border-color:transparent; } }

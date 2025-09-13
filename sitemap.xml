@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Strona główna -->
+  <url>
+    <loc>https://bazygon.github.io/CleanBruk/</loc>
+    <lastmod>2025-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Strony prawne / informacyjne -->
+  <url>
+    <loc>https://bazygon.github.io/CleanBruk/regulamin</loc>
+    <lastmod>2025-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bazygon.github.io/CleanBruk/polityka-prywatnosci</loc>
+    <lastmod>2025-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bazygon.github.io/CleanBruk/rodo</loc>
+    <lastmod>2025-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://bazygon.github.io/CleanBruk/cookies</loc>
+    <lastmod>2025-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- miejsce na kolejne rzeczy  <url> -->
+</urlset>

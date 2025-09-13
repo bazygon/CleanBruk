@@ -4,28 +4,40 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BrukClean – Czyszczenie kostki, elewacji i dachów | Łódzkie</title>
-  <meta name="description" content="BrukClean: profesjonalne czyszczenie kostki brukowej, elewacji i dachów w woj. łódzkim. Darmowa wycena, portfolio przed/po, szybkie terminy." />
-  <meta name="theme-color" content="#0a2a3d" />
+  <meta name="description" content="BrukClean: profesjonalne czyszczenie kostki brukowej, elewacji i dachów w woj. łódzkim. Darmowa wycena, portfolio przed/po, szybkie terminy.">
+  <meta name="theme-color" content="#0a2a3d">
+  <meta name="robots" content="index,follow">
+
+  <!-- Canonical / Sitemaps -->
+  <link rel="canonical" href="https://twojadomena.pl/">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
 
   <!-- Open Graph / SEO -->
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
   <meta property="og:title" content="BrukClean – Czyszczenie kostki, elewacji i dachów | Łódzkie">
   <meta property="og:description" content="Profesjonalne czyszczenie kostki brukowej, elewacji i dachów. Darmowa wycena i portfolio efektów przed/po.">
   <meta property="og:image" content="https://www.dropbox.com/scl/fi/7r6902lex6wox1efygv64/Czysta-kostka.png?rlkey=hbq2pxhnkl11avnd4ugee19if&st=sjsy1h4t&dl=1">
+  <meta property="og:url" content="https://twojadomena.pl/">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon -->
   <link rel="icon" href="https://www.dropbox.com/scl/fi/egmufbsllj6ucla1lsipq/BrukClean-Logo.png?rlkey=v815a8b85qgm54pbkx3wotn54&st=cdyhvi0q&dl=1">
 
   <!-- Preload krytycznych obrazów (LCP) -->
-  <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/0due56t4r4ks15cnm39kb/Brudna-kostka.png?rlkey=f9oxbe541j0wax4jkca7nni6c&st=8z8o3ais&dl=1" imagesrcset="https://www.dropbox.com/scl/fi/0due56t4r4ks15cnm39kb/Brudna-kostka.png?rlkey=f9oxbe541j0wax4jkca7nni6c&st=8z8o3ais&dl=1">
-  <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/7r6902lex6wox1efygv64/Czysta-kostka.png?rlkey=hbq2pxhnkl11avnd4ugee19if&st=sjsy1h4t&dl=1" imagesrcset="https://www.dropbox.com/scl/fi/7r6902lex6wox1efygv64/Czysta-kostka.png?rlkey=hbq2pxhnkl11avnd4ugee19if&st=sjsy1h4t&dl=1">
+  <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/0due56t4r4ks15cnm39kb/Brudna-kostka.png?rlkey=f9oxbe541j0wax4jkca7nni6c&st=8z8o3ais&dl=1">
+  <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/7r6902lex6wox1efygv64/Czysta-kostka.png?rlkey=hbq2pxhnkl11avnd4ugee19if&st=sjsy1h4t&dl=1">
   <link rel="preload" as="image" href="https://www.dropbox.com/scl/fi/egmufbsllj6ucla1lsipq/BrukClean-Logo.png?rlkey=v815a8b85qgm54pbkx3wotn54&st=cdyhvi0q&dl=1">
 
+  <!-- Fonts & CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Chart.js (defer, aby nie blokować renderu) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 
   <!-- JSON-LD: LocalBusiness -->
   <script type="application/ld+json">
@@ -36,9 +48,19 @@
     "image": "https://www.dropbox.com/scl/fi/egmufbsllj6ucla1lsipq/BrukClean-Logo.png?rlkey=v815a8b85qgm54pbkx3wotn54&st=cdyhvi0q&dl=1",
     "telephone": "+48 600 000 000",
     "email": "kontakt@brukclean.pl",
-    "address": { "@type": "PostalAddress", "addressLocality": "Łódź", "addressRegion": "Łódzkie", "addressCountry": "PL" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Łódź",
+      "addressRegion": "Łódzkie",
+      "addressCountry": "PL"
+    },
     "areaServed": "Woj. łódzkie",
-    "url": "https://twojadomena.pl"
+    "url": "https://twojadomena.pl",
+    "sameAs": [
+      "https://facebook.com/BrukClean",
+      "https://instagram.com/BrukClean",
+      "https://www.tiktok.com/@BrukClean"
+    ]
   }
   </script>
 </head>
@@ -48,7 +70,7 @@
 <header class="glass">
   <div class="wrap nav">
     <a href="#home" class="brand" aria-label="BrukClean – strona główna">
-      <img class="logo" src="https://www.dropbox.com/scl/fi/egmufbsllj6ucla1lsipq/BrukClean-Logo.png?rlkey=v815a8b85qgm54pbkx3wotn54&st=cdyhvi0q&dl=1" alt="BrukClean logo" width="40" height="40"/>
+      <img class="logo" src="https://www.dropbox.com/scl/fi/egmufbsllj6ucla1lsipq/BrukClean-Logo.png?rlkey=v815a8b85qgm54pbkx3wotn54&st=cdyhvi0q&dl=1" alt="BrukClean logo" width="40" height="40">
       <span>Bruk<span class="grad">Clean</span></span>
     </a>
     <nav aria-label="Główne">
@@ -77,7 +99,6 @@
             <span id="typingWord" class="typing">Elewacje</span>
           </span><br>
           <span class="line"><em>czyste jak nowe</em>.</span>
-        </h1>
         </h1>
         <p class="lead">Bezpieczne środki, mycie nisko- i wysokociśnieniowe, <strong>test na niewidocznym fragmencie</strong>. Zobacz porównanie przed/po i zamów darmową wycenę.</p>
         <div class="badges">
@@ -250,8 +271,8 @@
               </select>
             </label>
             <div class="checks">
-              <label><input type="checkbox" id="imp"/> Impregnacja po myciu</label>
-              <label><input type="checkbox" id="lift"/> Dostęp z podnośnika</label>
+              <label><input type="checkbox" id="imp"> Impregnacja po myciu</label>
+              <label><input type="checkbox" id="lift"> Dostęp z podnośnika</label>
             </div>
           </div>
           <div class="grid grid-2">
@@ -271,7 +292,12 @@
           <label>Dodatkowe informacje
             <textarea id="msg" placeholder="Opisz krótko zakres. Zdjęcia możesz odesłać w reply na mail." autocomplete="off"></textarea>
           </label>
-          <label class="consent"><input id="rodo" type="checkbox" required> Zgadzam się na kontakt w celu przygotowania wyceny. Akceptuję <a href="#regulamin">Regulamin</a> i <a href="#polityka">Politykę prywatności</a>.</label>
+          <label class="consent">
+            <input id="rodo" type="checkbox" required>
+            Zgadzam się na kontakt w celu przygotowania wyceny. Akceptuję
+            <a href="regulamin.html" target="_blank" rel="noopener">Regulamin</a> i
+            <a href="polityka-prywatnosci.html" target="_blank" rel="noopener">Politykę prywatności</a>.
+          </label>
           <div class="cta-row">
             <button type="submit" class="cta">Wyślij i zamów wycenę</button>
             <a class="ghost" href="tel:+48600000000">Zadzwoń: +48 600 000 000</a>
@@ -404,7 +430,6 @@
           </div>
           <p class="mut small">Kliknij, aby wczytać mapę (zewnętrzna treść).</p>
           <div class="social">
-            <!-- Spójne ikonki jak w stopce -->
             <a class="ico" href="https://facebook.com/BrukClean" target="_blank" rel="noopener" aria-label="Facebook BrukClean">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12.07C22 6.5 17.52 2 11.93 2 6.35 2 2 6.5 2 12.07c0 5.01 3.66 9.16 8.44 9.93v-7.02H7.9v-2.91h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34v7.02C18.34 21.23 22 17.08 22 12.07z"/></svg>
             </a>
@@ -426,12 +451,12 @@
             <li>Prace zgodnie z BHP; podnośnik rozliczany osobno po akceptacji.</li>
             <li>Dostęp do wody/prądu po stronie klienta, o ile inaczej nie uzgodniono.</li>
             <li>Odbiór protokołem; reklamacje do 7 dni.</li>
-            <li>Pełny regulamin wysyłamy wraz z potwierdzeniem zlecenia.</li>
+            <li>Pełny regulamin wysyłamy wraz z potwierdzeniem zlecenia. <a href="regulamin.html" class="small">Pełna wersja</a></li>
           </ul>
         </article>
         <article id="polityka" class="card reveal">
           <h3>Polityka prywatności (RODO – skrót)</h3>
-          <p class="mut small">Administratorem danych jest BrukClean. Dane z formularzy przetwarzamy wyłącznie do kontaktu i przygotowania wyceny (art. 6 ust. 1 lit. b RODO). Masz prawo dostępu, sprostowania, usunięcia danych. Dane nie są przekazywane poza EOG bez podstawy prawnej.</p>
+          <p class="mut small">Administratorem danych jest BrukClean. Dane z formularzy przetwarzamy wyłącznie do kontaktu i przygotowania wyceny (art. 6 ust. 1 lit. b RODO). Masz prawo dostępu, sprostowania, usunięcia danych. Dane nie są przekazywane poza EOG bez podstawy prawnej. <a href="polityka-prywatnosci.html" class="small">Pełna wersja</a></p>
         </article>
       </div>
     </div>
@@ -440,13 +465,13 @@
 
 <footer>
   <div class="wrap foot">
+    <!-- Kolumna 1: Brand + social -->
     <div>
-      <a href="#home" class="brand">
-        <img class="logo" src="https://www.dropbox.com/scl/fi/egmufbsllj6ucla1lsipq/BrukClean-Logo.png?rlkey=v815a8b85qgm54pbkx3wotn54&st=cdyhvi0q&dl=1" alt="BrukClean logo" width="34" height="34"/>
+      <a href="#home" class="brand" aria-label="BrukClean – strona główna">
+        <img class="logo" src="https://www.dropbox.com/scl/fi/egmufbsllj6ucla1lsipq/BrukClean-Logo.png?rlkey=v815a8b85qgm54pbkx3wotn54&st=cdyhvi0q&dl=1" alt="BrukClean logo" width="34" height="34">
         <span>Bruk<span class="grad">Clean</span></span>
       </a>
       <p class="mut">Profesjonalne czyszczenie kostki, elewacji i dachów. Łódź i całe woj. łódzkie.</p>
-      <div class="copyright">© <span id="year"></span> BrukClean</div>
 
       <h4 style="margin-top:14px">Media społecznościowe</h4>
       <div class="social social-foot">
@@ -464,16 +489,41 @@
       <button class="ghost" id="manageCookies" style="margin-top:12px">Zarządzaj prywatnością</button>
     </div>
 
+    <!-- Kolumna 2: Nawigacja -->
     <div>
       <h4>Nawigacja</h4>
-      <p><a href="#home">Start</a><br><a href="#uslugi">Usługi</a><br><a href="#realizacje">Realizacje</a><br><a href="#wycena">Wycena</a><br><a href="#kontakt">Kontakt</a></p>
+      <ul class="foot-list">
+        <li><a href="#home">Start</a></li>
+        <li><a href="#uslugi">Usługi</a></li>
+        <li><a href="#realizacje">Realizacje</a></li>
+        <li><a href="#wycena">Wycena</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
     </div>
 
+    <!-- Kolumna 3: Kontakt -->
     <div>
       <h4>Kontakt</h4>
-      <p><a href="tel:+48600000000">+48 600 000 000</a><br><a href="mailto:kontakt@brukclean.pl">kontakt@brukclean.pl</a><br>Łódź i okolice</p>
+      <ul class="foot-list">
+        <li><a href="tel:+48600000000">+48 600 000 000</a></li>
+        <li><a href="mailto:kontakt@brukclean.pl">kontakt@brukclean.pl</a></li>
+        <li>Łódź i okolice</li>
+      </ul>
     </div>
 
+    <!-- Kolumna 4: Prawne -->
+    <div>
+      <h4>Prawne</h4>
+      <ul class="foot-list">
+        <li><a href="regulamin.html">Regulamin</a></li>
+        <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+        <li><a href="cookies.html">Polityka cookies</a></li>
+        <li><a href="rodo.html">Informacja RODO</a></li>
+        <li><a href="sitemap.xml">Mapa strony</a></li>
+      </ul>
+    </div>
+
+    <!-- Kolumna 5: Newsletter -->
     <div>
       <h4>Newsletter</h4>
       <form class="sub" id="subForm">
@@ -483,7 +533,18 @@
       <p class="mut small" id="subMsg"></p>
     </div>
   </div>
+
+  <div class="wrap foot-bottom">
+    <small>© <span id="year"></span> BrukClean • NIP: 0000000000 • Wszelkie prawa zastrzeżone</small>
+    <small>
+      Website powered by
+      <a href="https://bazygon.github.io/ChromaPixel-Studio" target="_blank" rel="noopener noreferrer">
+        ChromaPixel Studio
+      </a>
+    </small>
+  </div>
 </footer>
+
 
 <!-- FLOAT CHAT -->
 <div class="float-chat">
@@ -514,6 +575,7 @@
   </div>
 </noscript>
 
+<!-- Twój skrypt (w tej wersji nie wymaga zmian) -->
 <script src="main.js"></script>
 </body>
 </html>
